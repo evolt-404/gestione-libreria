@@ -17,6 +17,7 @@ public class Libro
 	private String titolo;
 	private String autore;
 	
+	
 	public int getId() 
 	{
 		return id;
