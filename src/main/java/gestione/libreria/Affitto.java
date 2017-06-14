@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 import javax.persistence.FetchType;
 import javax.persistence.CascadeType;
@@ -15,10 +16,13 @@ public class Affitto {
 	@Id
 	@GeneratedValue
 	private int id;
+	private int idLibro;
 	private String nomeCompleto;
 	private String cf;
 	private String data;
-	@OneToOne(fetch = FetchType.LAZY, mappedBy = "Affitto", cascade = CascadeType.ALL)
+	
+	@OneToOne(fetch = FetchType.LAZY)
+	@PrimaryKeyJoinColumn
 	private Libro libro;
 	
 	public int getId() {
@@ -51,4 +55,11 @@ public class Affitto {
 	public void setLibro(Libro libro) {
 		this.libro = libro;
 	}
+	public int getIdLibro() {
+		return idLibro;
+	}
+	public void setIdLibro(int idLibro) {
+		this.idLibro = idLibro;
+	}
+	
 }

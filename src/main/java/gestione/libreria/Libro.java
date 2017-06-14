@@ -1,6 +1,8 @@
 package gestione.libreria;
 
 import java.util.ArrayList;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -19,8 +21,7 @@ public class Libro
 	private int id;
 	private String titolo;
 	private String autore;
-	@OneToOne(fetch = FetchType.LAZY)
-	@PrimaryKeyJoinColumn
+	@OneToOne(fetch = FetchType.LAZY, mappedBy = "affitto", cascade = CascadeType.ALL)
 	private Affitto affitto;
 	
 	public int getId() 
