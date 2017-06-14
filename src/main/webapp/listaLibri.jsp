@@ -20,7 +20,7 @@
 	
 		<input type="text" value="nomeCompleto">Nome Completo<br />
 		<input type="text" value="cf">Codice Fiscale<br />
-		<input type="text" value="data">Data Affitto Libro<br />
+		<input type="text" value="data">Data Affitto<br />
 		
 		
 		<select name="libro">
