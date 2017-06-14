@@ -16,8 +16,13 @@
 	List<Libro> listaLibri = (ArrayList<Libro>) request.getAttribute("listaLibri");
 	if (listaLibri != null) {
 %>
-	<form action="ComboBox">
-
+	<form action="ComboBox" method="post">
+	
+		<input type="text" value="nomeCompleto">Nome Completo<br />
+		<input type="text" value="cf">Codice Fiscale<br />
+		<input type="text" value="data">Data Affitto<br />
+		
+		
 		<select name="libro">
 			<%
 				for (Libro l : listaLibri) {
@@ -35,7 +40,7 @@
 		} else {
 	%>
 	
-		<p>la lista è vuota</p>
+		<p>Tutti i libri sono affittati</p>
 	<%
 		}
 	%>	
