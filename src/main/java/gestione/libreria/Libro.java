@@ -11,7 +11,6 @@ import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
-
 @Entity
 @Table(name = "Libro", schema = "GESTIONE_LIBRERIA")
 public class Libro 
@@ -21,7 +20,7 @@ public class Libro
 	private int id;
 	private String titolo;
 	private String autore;
-	@OneToOne(fetch = FetchType.LAZY, mappedBy = "affitto", cascade = CascadeType.ALL)
+	@OneToOne(fetch = FetchType.LAZY, mappedBy = "libro", cascade = CascadeType.ALL)
 	private Affitto affitto;
 	
 	public int getId() 
@@ -54,5 +53,9 @@ public class Libro
 	public void setAffitto(Affitto affitto) {
 		this.affitto = affitto;
 	}
-
+	@Override
+	public String toString() {
+		return titolo + " - " + autore;
+	}
+	
 }

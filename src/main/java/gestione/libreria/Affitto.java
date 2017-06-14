@@ -20,7 +20,6 @@ public class Affitto {
 	private String nomeCompleto;
 	private String cf;
 	private String data;
-	
 	@OneToOne(fetch = FetchType.LAZY)
 	@PrimaryKeyJoinColumn
 	private Libro libro;
