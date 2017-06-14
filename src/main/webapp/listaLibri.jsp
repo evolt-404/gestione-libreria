@@ -13,7 +13,7 @@
 	Lista libri:
 
 	<%
-	List<Libro> listaLibri = (ArrayList<Libro>) request.getAttribute("listaLibro");
+	List<Libro> listaLibri = (ArrayList<Libro>) request.getAttribute("listaLibri");
 	if (listaLibri != null) {
 %>
 	<form action="ComboBox">

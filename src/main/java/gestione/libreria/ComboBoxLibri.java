@@ -24,6 +24,24 @@ public class ComboBoxLibri extends HttpServlet {
 		requestDispatcherObj.forward(request, response);
 
 	}
+	
+	
+	@Override
+	protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		Libro libro = (Libro) req.getAttribute("libro");
+		int id = libro.getId();
+		String nomeCompleto = req.getParameter("nomeCompleto");
+		String cf = req.getParameter("cf");
+		String data = req.getParameter("data");
+		
+		GestioneLibreria.creaAffitto(nomeCompleto, cf, data, id);
+		
+		
+		
+		
+		
+	}
 
 	
 	private List<Libro> creaListaLibri(Libro attribute) {
