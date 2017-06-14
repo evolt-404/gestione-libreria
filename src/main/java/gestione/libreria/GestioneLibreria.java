@@ -2,6 +2,7 @@ package gestione.libreria;
 
 import javax.persistence.Query;
 
+
 public class GestioneLibreria {
 
 	public static void creaAffitto(String nomeCompleto, String cf, String data, int id) {
