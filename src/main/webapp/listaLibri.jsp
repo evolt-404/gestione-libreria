@@ -18,9 +18,12 @@
 %>
 	<form action="ComboBox" method="post">
 	
-		<input type="text" value="nomeCompleto">Nome Completo<br />
-		<input type="text" value="cf">Codice Fiscale<br />
-		<input type="text" value="data">Data Affitto<br />
+		Nome Completo<br />
+		<input type="text" name="nomeCompleto">
+		Codice Fiscale<br />
+		<input type="text" name="cf">
+		Data Affitto<br />
+		<input type="text" name="data">
 		
 		
 		<select name="libro">
