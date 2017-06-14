@@ -13,6 +13,7 @@ import javax.persistence.CascadeType;
 @Table(name = "Affitto", schema = "GESTIONE_LIBRERIA")
 public class Affitto {
 	
+	
 	@Id
 	@GeneratedValue
 	private int id;

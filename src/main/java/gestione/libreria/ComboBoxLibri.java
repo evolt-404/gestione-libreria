@@ -25,6 +25,7 @@ public class ComboBoxLibri extends HttpServlet {
 
 	}
 
+	
 	private List<Libro> creaListaLibri(Libro attribute) {
 		
 		List<Libro> listaLibri = new ArrayList<Libro>();

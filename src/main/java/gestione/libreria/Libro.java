@@ -15,6 +15,7 @@ import javax.persistence.Table;
 @Table(name = "Libro", schema = "GESTIONE_LIBRERIA")
 public class Libro 
 {
+	
 	@Id
 	@GeneratedValue
 	private int id;
