@@ -17,8 +17,7 @@ public class ComboBoxLibri extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Libro attribute = (Libro) request.getAttribute("libro");
-		List<Libro> listaLibri = creaListaLibri(attribute);
+		List<Libro> listaLibri = creaListaLibri();
 		request.setAttribute("listaLibri", listaLibri);
 		RequestDispatcher requestDispatcherObj = request.getRequestDispatcher("/listaLibri.jsp");
 		requestDispatcherObj.forward(request, response);
@@ -28,20 +27,24 @@ public class ComboBoxLibri extends HttpServlet {
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		//E' NECESSARIO CREARE UNA NUOVA SERVLET PER L'INSERIMENTO DATI/CREAZIONE AFFITTO
 		Libro libro = (Libro) req.getAttribute("libro");
+		System.out.println(libro);
 		int id = libro.getId();
+		
 		String nomeCompleto = req.getParameter("nomeCompleto");
 		String cf = req.getParameter("cf");
 		String data = req.getParameter("data");
+		
 		GestioneLibreria.creaAffitto(nomeCompleto, cf, data, id);
+		
 		RequestDispatcher requestDispatcherObj = req.getRequestDispatcher("/risultato.jsp");
 		requestDispatcherObj.forward(req, resp);
 		
 	}
 
 	
-	private List<Libro> creaListaLibri(Libro attribute) {
+	private List<Libro> creaListaLibri() {
 		
 		List<Libro> listaLibri = new ArrayList<Libro>();
 		ServicesCrud crud = new ServicesCrud("jpa-example");

@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="3.0"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-	
+
 	<display-name>ComboBox</display-name>
 	<servlet>
 		<servlet-name>ComboBox</servlet-name>
@@ -12,5 +12,16 @@
 	<servlet-mapping>
 		<servlet-name>ComboBox</servlet-name>
 		<url-pattern>/ComboBox</url-pattern>
+	</servlet-mapping>
+
+	<display-name>Affitto</display-name>
+	<servlet>
+		<servlet-name>Affitto</servlet-name>
+		<servlet-class>gestione.libreria.ServletAffitto</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Affitto</servlet-name>
+		<url-pattern>/Affitto</url-pattern>
 	</servlet-mapping>
 </web-app>

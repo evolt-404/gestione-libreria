@@ -18,15 +18,17 @@
 %>
 	<form action="ComboBox" method="post">
 	
-		Nome Completo<br />
-		<input type="text" name="nomeCompleto">
-		Codice Fiscale<br />
-		<input type="text" name="cf">
-		Data Affitto<br />
-		<input type="text" name="data">
+<!-- 		Nome Completo<br /> -->
+<!-- 		<input type="text" name="nomeCompleto"><br /> -->
+<!-- 		Codice Fiscale<br /> -->
+<!-- 		<input type="text" name="cf"><br /> -->
+<!-- 		Data Affitto<br /> -->
+<!-- 		<input type="text" name="data"><br /> -->
 		
 		
-		<select name="libro">
+<!-- 		il campo "libro" NON assume alcun valore finché non viene effettuato il SUBMIT -->
+		
+		<select name="libro"> 
 			<%
 				for (Libro l : listaLibri) {
 			%>
