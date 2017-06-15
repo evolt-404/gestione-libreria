@@ -28,10 +28,9 @@ public class ComboBoxLibri extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		//E' NECESSARIO CREARE UNA NUOVA SERVLET PER L'INSERIMENTO DATI/CREAZIONE AFFITTO
-		Libro libro = (Libro) req.getAttribute("libro");
-		System.out.println(libro);
-		int id = libro.getId();
-		
+		String parameter = req.getParameter("libro");
+		int id = Integer.parseInt(parameter);
+
 		String nomeCompleto = req.getParameter("nomeCompleto");
 		String cf = req.getParameter("cf");
 		String data = req.getParameter("data");

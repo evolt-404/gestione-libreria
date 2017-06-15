@@ -6,37 +6,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Affitto Riuscito</title>
 </head>
 <body>
-
 	
-	
-	<form action ="Affitto">
-	<%
-		Libro libro = (Libro) request.getAttribute("libro");
-	
-	%>
-		Nome Completo<br />
-		<input type="text" name="nomeCompleto"><br />
-		Codice Fiscale<br />
-		<input type="text" name="cf"><br />
-		Data Affitto<br />
-		<input type="text" name="data"><br />
-		
-		<%=libro %>
-		
-		<br> <br> <input type="submit">
-	</form>
-		
-		
-		
-		
-		
 	<h1>PORCO DIO! Hai Affittato il libro.</h1>
 	<p>
-		Per tornare indietro, clicca <a
+		Per affittare ancora, clicca <a
 			href="http://localhost:8080/GestioneLibreria/ComboBox">qui</a>
 	</p>
+	
 </body>
 </html>
