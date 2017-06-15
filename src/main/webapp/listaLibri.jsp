@@ -39,8 +39,14 @@
 			<%
 				}
 			%>
+			
+			<%
+			Libro libro = new Libro();
+			request.setAttribute("libro",libro);
+			%>
 		</select> <br> <br> <input type="submit">
 	</form>
+	
 	<% 
 		} else {
 	%>
