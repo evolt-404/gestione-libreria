@@ -23,6 +23,8 @@ public class GestioneLibreria {
 		// inserisci id
 		affitto.setIdLibro(id);
 		
+		libro.setAffitto(affitto);
+		
 		// Creazione record in tabella
 		crud_services.jpaCreate(affitto);
 		crud_services.closeLogicaJPA();
